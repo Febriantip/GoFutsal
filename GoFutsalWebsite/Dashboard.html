@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Go Futsal</title>
+    </head>
+        <body>
+            <div class="container">
+                <!-- Menu Header-->
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <a href="login.php" class="foto" ><img src="foto/Frame.png" style="width: 2%"></a>
+                            <li><a href="#popup" class="">ABOUT</a></li>
+                            <li><a href="jadwalterkini.php">JADWAL TERKINI</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h1>GO FUTSAL</h1>
+                        <p>Selamat Datang di website kami</p>
+                        <button type="button"><a href="booking.html">Booking Now</a></button>
+                    </div>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <div class="numbertext">1 / 3</div>
+                          <img src="foto/piala.jpg" style="width:100%">
+                          <div class="text">JADWAL AFC TERKINI</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">2 / 3</div>
+                          <img src="foto/tour.jpg" style="width:100%">
+                          <div class="text">GO FUTSAL CUP</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">3 / 3</div>
+                          <img src="foto/nobar.jpg" style="width:100%">
+                          <div class="text">NONTON BARENG</div>
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        
+                        </div>
+                        <br>
+                    
+                        
+                        <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          let i;
+                          let slides = document.getElementsByClassName("mySlides");
+                          let dots = document.getElementsByClassName("dot");
+                          if (n > slides.length) {slideIndex = 1}    
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";  
+                          dots[slideIndex-1].className += " active";
+                        }
+                        </script>
+                        
+                </div>
+
+                </div>
+
+                <div class="popup" id="popup">
+                    <div class="popup_content">
+                        <div class="popup_header">
+                            <h1>ABOUT</h1>
+                        </div>
+                        <div class="popup_text">
+                            <p>Kami adalah penyedia layanan booking online lapangan Futsal yang mudah
+                                dan sangat terjangkau dimasa ENDPANDEMIC, dengan tersedianya berbagai fitur
+                                layanan yang memudahkan anda menetukan hari jam dan lapangan yang tersedia
+                            </p>
+                            <a href="Dashboard.html" class="btn">BACK</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bagian Kontak -->
+            <section id="contact">
+                <div class="con">
+                    <h3>CONTACT</h3>
+                    <div class="col3">
+                        <h4>Alamat</h4>
+                        <p>Jln yang di ridhoi allah</p>
+                    </div>
+    
+                    <div class="col3">
+                        <h4>Email</h4>
+                        <p>gofutsal@gmail.com</p>
+                    </div>
+    
+                    <div class="col3">
+                        <h4>Telp/hp</h4>
+                        <p>+62 8561146480</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <small>Copyright &copy; 2022 - Go Futsal. </small>
+            </div>
+        </body>
+    </head>
+</html>
